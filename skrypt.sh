@@ -11,6 +11,12 @@ case "$1" in
 			echo -e "log${i}.txt\nskrypt.sh\n$(date)" > logs/log${i}.txt
 		done
 		;;
+	--help)
+		echo "Dostępne opcje:"
+		echo "--date"
+		echo "--logs [number]"
+		echo "--help"
+		;;
 	*)
 		echo "Nieznana opcja. Użyj --help, aby zobaczyć dostępne opcje."
 		;;
