@@ -11,10 +11,15 @@ case "$1" in
 			echo -e "log${i}.txt\nskrypt.sh\n$(date)" > logs/log${i}.txt
 		done
 		;;
+	--init)
+		git clone https://github.com/Matched2003/Labor4
+		export PATH=$PATH:$(pwd)/Labor4
+		;;
 	--help|-h)
 		echo "Dostępne opcje:"
 		echo "--date, -d"
 		echo "--logs [number], -l [number]"
+		echo "--init"
 		echo "--help, -h"
 		;;
 	*)
